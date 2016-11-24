@@ -6,6 +6,9 @@ const AddItemView = ({ addItem }) => (
     onSubmit={ (event) => {
       event.preventDefault()
       let userInput = event.target.input.value
+      if(userInput === '') {
+        return false
+      }
       addItem(userInput)
       event.target.input.value = ''
     }}
