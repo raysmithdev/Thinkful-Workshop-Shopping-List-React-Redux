@@ -7,3 +7,10 @@ export const addItem = (item) => {
     id: id++
   }
 }
+
+export const deleteItem = (id) => {
+  return {
+    type:'DELETE_ITEM',
+    id
+  }
+}

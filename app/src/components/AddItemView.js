@@ -17,7 +17,7 @@ const AddItemView = ({ addItem }) => (
     <FormGroup controlId="formInlineName">
       <FormControl name="input" type="text" placeholder="Add item..." />
     </FormGroup>
-    <Button bsStyle="info" type="submit">
+    <Button type="submit">
       Add item
     </Button>
   </Form>
