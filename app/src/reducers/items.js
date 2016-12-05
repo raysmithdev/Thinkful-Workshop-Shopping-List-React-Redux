@@ -1,23 +1,9 @@
-const item = (state = {}, action) => {
-  switch (action.type) {
-    case 'ADD_ITEM':
-      return {
-        id: action.id,
-        text: action.item,
-        createdAt: Date.now()
-      }
-    default:
-      return state
-  }
-}
-
-
 const items = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_ITEM':
+    case 'RECEIVE_DATA':
       return [
         ...state,
-        item(undefined, action)
+        action.items
       ]
     case 'DELETE_ITEM':
       return [
